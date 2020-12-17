@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商城</title>
     <style>
-        body{
+        body {
             padding: 0px;
             margin: 0px;
+            height: auto;
         }
+
         .top {
             width: 100%;
             height: auto;
@@ -95,15 +97,202 @@
         .top_bottom>.right>div {
             color: #8c8c8c;
         }
-        .top_bottom>.right>img{
-            position:absolute;
+
+        .top_bottom>.right>img {
+            position: absolute;
             width: 36px;
             height: 36px;
             left: 74.5%;
         }
-        .top_banner>img{
+
+        .top_banner>img {
             width: 100%;
             height: 600px;
+        }
+
+        .middle_text {
+            width: 100%;
+            height: 88px;
+            text-align: center;
+            line-height: 88px;
+            margin-top: 32px;
+            font-size: 32px;
+            color: #4c4c4c;
+            font-weight: 700;
+        }
+
+        .middle_img {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .img_list {
+            display: flex;
+            width: 20%;
+            margin: 20px;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .img_list>img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .img_list>.span_div {
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .span_div>span {
+            width: 100%;
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        .span_div> :first-child {
+            color: #ff134a;
+        }
+
+        .container {
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        .container_list_1 {
+            width: 100%;
+            margin-top: 88px;
+        }
+
+        .container_list_1>span {
+         
+            font-size: 32px;
+            color: #4c4c4c;
+            display: block;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ff134a;
+        }
+
+        .container_list_1>.container_div {
+            width: 100%;
+            height: 528px;
+            display: flex;
+            margin-top: 24px;
+        }
+
+        .container_div>.list_left {
+            width: 25%;
+            height: 100%;
+            margin: 1px;
+
+        }
+
+        .container_div>.list_left>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container_div>.list_middle {
+            display: flex;
+            width: 50%;
+            height: 100%;
+            flex-wrap: wrap;
+        }
+
+        .container_div>.list_middle>.middle_top {
+            width: 100%;
+            height: 50%;
+        }
+
+        .container_div>.list_middle>.middle_top>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container_div>.list_middle>.middle_bottom {
+            display: flex;
+            width: 100%;
+            height: 50%;
+            flex-wrap: nowrap;
+        }
+
+        .container_div>.list_middle>.middle_bottom>.bottom_left {
+            width: 50%;
+            height: 100%;
+        }
+
+        .container_div>.list_middle>.middle_bottom>.bottom_left>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container_div>.list_middle>.middle_bottom>.bottom_right {
+            width: 50%;
+            height: 100%;
+        }
+
+        .container_div>.list_middle>.middle_bottom>.bottom_right>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container_div>.list_right {
+            width: 25%;
+            height: 100%;
+            margin: 1px;
+
+        }
+
+        .container_div>.list_right>img {
+            width: 100%;
+            height: 100%;
+
+        }
+        .container_div_2{
+            width: 100%;
+            height: 528px;
+            display: flex;
+            margin-top: 24px;
+            margin-bottom: 100px;
+        }
+        .container_div_2>.left_div{
+            width: 25%;
+            height: 100%;
+        }
+        .container_div_2>.left_div>img{
+            width: 100%;
+            height: 100%;
+        }
+        .container_div_2>.right_div{
+            width: 75%;
+            height: 100%;
+            flex-wrap: wrap;
+            display: flex;
+        }
+        .container_div_2>.right_div>.right_top{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .container_div_2>.right_div>.right_top>img{
+            width: 33.3%;
+            height: 100%;
+        }
+        .container_div_2>.right_div>.right_bottom>img{
+            width: 33.3%;
+            height: 100%;
+        }
+        .container_div_2>.right_div>.right_bottom{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-wrap: nowrap;
         }
     </style>
 </head>
@@ -131,14 +320,99 @@
             </div>
             <div class="right">
                 <input type="text" placeholder="提拉米苏">
-            <img src="../images/timg.png" alt="">
+                <img src="../images/timg.png" alt="">
             </div>
         </div>
 
     </div>
 
     <div class="top_banner">
-<img src="../images/banner.png" alt="">
+        <img src="../images/banner.png" alt="">
+    </div>
+    <div class="middle_text">
+        <span>本周精选蛋糕</span>
+    </div>
+    <div class="middle_img">
+        <div class="img_list">
+            <img src="../images/top1.png" alt="">
+            <div class="span_div">
+                <span>伏格雷</span>
+                <span>哈根达斯月饼风味酸奶冰淇淋</span>
+            </div>
+
+        </div>
+        <div class="img_list">
+            <img src="../images/top2.png" alt="">
+            <div class="span_div">
+                <span>歌帝梵</span>
+                <span>Dipping点蘸系列</span>
+            </div>
+
+        </div>
+        <div class="img_list">
+            <img src="../images/top3.png" alt="">
+            <div class="span_div">
+                <span>中街1946</span>
+                <span>回归童年系列冰品</span>
+            </div>
+
+        </div>
+        <div class="img_list">
+            <img src="../images/top4.jpg" alt="">
+            <div class="span_div">
+                <span>Vivi Dolce</span>
+                <span>糖果色系化妆品冰淇淋</span>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="container_list_1">
+            <span>爱之使者</span>
+            <div class="container_div">
+                <div class="list_left">
+                    <img src="../images/middle1.jpg" alt="">
+                </div>
+                <div class="list_middle">
+                    <div class="middle_top">
+                        <img src="../images/middle2.jpg" alt=""></div>
+
+                    <div class="middle_bottom">
+                        <div class="bottom_left">
+                            <img src="../images/middle3.jpg" alt="">
+                        </div>
+                        <div class="bottom_right">
+                            <img src="../images/middle4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="list_right">
+                    <img src="../images/middle5.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="container_list_1">
+            <span>饭后小憩</span>
+            <div class="container_div_2">
+                <div class="left_div">
+                    <img src="../images/middle12.jpg" alt="">
+                </div>
+                <div class="right_div">
+                <div class="right_top">
+                    <img src="../images/middle6.jpg" alt="">
+                    <img src="../images/middle7.jpg" alt="">
+                    <img src="../images/middle8.jpg" alt="">
+                </div>
+                <div class="right_bottom">
+                    <img src="../images/middle9.jpg" alt="">
+                    <img src="../images/middle10.jpg" alt="">
+                    <img src="../images/middle11.jpg" alt="">
+                </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
