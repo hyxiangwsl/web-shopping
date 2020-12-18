@@ -114,91 +114,70 @@
         }
 
         .top_banner>img {
-            width: 100%;
-            height: 600px;
+            width: 80%;
+            margin-left: 10%;
+            height: 400px;
         }
 
-        .container_text {
-            width: 80%;
-            height: 120px;
-            margin-left: 10%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            color: #4c4c4c;
-        }
+
 
         .container {
-            width: 80%;
-            margin-left: 10%;
-            height: auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-bottom: 200px;
+            width: 1200px;
+            margin: auto;
         }
 
-        .container>.container_list {
-            width: 20%;
-            height: auto;
-            margin: 20px;
-            border-radius: 16px;
-            padding-bottom: 10px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
+        .container>.one {
+            margin-top: 30px;
+            margin-left: 80px;
         }
 
-        .container>.container_list>.list_top {
-            width: 100%;
-            height: 180px;
-            border-radius: 16px 16px 0px 0px;
+        .container>.one>.img_div {
+            float: left;
+            width: 400px;
+            height: 400px;
         }
 
-        .container>.container_list>.list_top>img {
+        .container>.one>.img_div>img {
             width: 100%;
             height: 100%;
-            border-radius: 16px 16px 0px 0px;
         }
 
-        .container_list>.list_bottom {
-            width: 100%;
-            height: 70px;
-            display: flex;
-            flex-direction: column;
+        .container>.one>.text_div {
+            float: right;
         }
 
-        .container_list>.list_bottom>span {
+        .container>.one>.text_div>.img_top {
+            width: 202px;
+            height: 111px;
+            margin-left: 200px;
+        }
+
+        .container>.one>.text_div>.img_top>img {
             width: 100%;
-            text-align: left;
+            height: 100%;
+        }
+
+        .container>.one>.text_div>.text_top {
+            font-size: 30px;
+            color: #4c4c4c;
             display: block;
-            width: 100%;
-            height: 50%;
-            padding: 0px 8px;
+            margin-top: 30px;
+            margin-left: 320px;
         }
-
-        .container_list>.list_bottom>.pirce_div {
-            width: 90%;
-            height: 50%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
+        .container>.one>.text_div>.text_middle {
+            font-size: 14px;
+            color: #4c4c4c;
+            margin-top: 20px;
         }
-
-        .container_list>.list_bottom>.pirce_div>div>span {
-            color: #ff134a;
-            font-size: 24px;
-            font-weight: 700;
-        }
-
-        .container_list>.list_bottom>.pirce_div>:last-child {
-            width: auto;
-            padding: 3px 10px;
-            height: 26px;
-            border: #ff134a solid 1px;
-            border-radius: 12px;
+        .container>.one>.text_div>  .btn_bottom{
+            margin-left: 320px;
+            margin-top: 40px;
+            width: 100px;
+            height: 40px;
+            background-color: #ff134a;
             text-align: center;
-            line-height: 26px;
+            line-height: 40px;
+            border-radius: 32px;
         }
     </style>
 </head>
@@ -221,7 +200,7 @@
             </div>
             <div class="middle">
                 <a href="../html/index.html">首页</a>
-                <a href="../html/desserts1.html">中式甜品</a>
+                <a href="../html/desserts1.html">港式甜品</a>
                 <a href="../html/desserts2.html">西式甜品</a>
 
             </div>
@@ -234,61 +213,32 @@
     </div>
 
     <div class="top_banner">
-        <img src="../images/banner.png" alt="">
+        <img src="../images/banner3.jpg" alt="">
     </div>
-    <div class="container_text">热烈推荐</div>
     <div class="container">
-        <div class="container_list">
-            <div class="list_top">
-                <img src="../images/middle11.jpg" alt="">
+        <div class="one">
+            <div class="img_div">
+                <img src="../images//gimg1.jpg" alt="">
             </div>
-            <div class="list_bottom">
-                <span>吃吃吃吃吃吃吃吃吃吃吃吃吃吃吃次</span>
-                <div class="pirce_div">
-                    <div>￥<span>9.9</span></div>
-                    <span>立即下单</span>
+            <div class="text_div">
+                <div class="img_top">
+                    <img src="../images/gtop01.jpg" alt="">
                 </div>
-            </div>
-        </div>
-        <div class="container_list">
-            <div class="list_top">
-                <img src="../images/middle11.jpg" alt="">
-            </div>
-            <div class="list_bottom">
-                <span>吃吃吃吃吃吃吃吃吃吃吃吃吃吃吃次</span>
-                <div class="pirce_div">
-                    <div>￥<span>9.9</span></div>
-                    <span>立即下单</span>
-                </div>
-            </div>
-        </div>
+                <div class="text_top">origin</div>
 
-        <div class="container_list">
-            <div class="list_top">
-                <img src="../images/middle11.jpg" alt="">
-            </div>
-            <div class="list_bottom">
-                <span>吃吃吃吃吃吃吃吃吃吃吃吃吃吃吃次</span>
-                <div class="pirce_div">
-                    <div>￥<span>9.9</span></div>
-                    <span>立即下单</span>
+                <div class="text_middle">
+                    港式甜品是香港潮流美食的代表，源起于广东饮食中传统的“糖水”<br>
+                    经港人创新而自成一派。既有历史的传承，也是西化与创新的产物<br>
+                    用新鲜水果，牛奶，和各种优质材料做成卖相和口味皆佳的甜品，<br>
+                    港式甜品最大的特色便在于对水果滋味的把握。
                 </div>
-            </div>
-        </div>
-
-        <div class="container_list">
-            <div class="list_top">
-                <img src="../images/middle11.jpg" alt="">
-            </div>
-            <div class="list_bottom">
-                <span>吃吃吃吃吃吃吃吃吃吃吃吃吃吃吃次</span>
-                <div class="pirce_div">
-                    <div>￥<span>9.9</span></div>
-                    <span>立即下单</span>
+                <div class="btn_bottom">
+                    查看详情
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
