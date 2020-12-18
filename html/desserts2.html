@@ -1,11 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>网红热销</title>
+    <title>西式甜品</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            height: auto;
+        }
+
+        .top {
+            width: 100%;
+            height: auto;
+            display: flex;
+            /* 设置为弹性盒子 */
+            justify-content: center;
+            /* 让盒子里面的元素水平居中 */
+            flex-wrap: wrap;
+        }
+
+        .top>.top_top {
+            width: 60%;
+            display: flex;
+            /* 设置为弹性盒子 */
+            justify-content: space-between;
+            /* 让盒子里面的元素2侧对齐 */
+            color: #8c8c8c;
+        }
+
+        .top>.top_top>.top_riight>a {
+            margin-right: 20px;
+            color: #8c8c8c;
+        }
+
+        .top_bottom {
+            width: 60%;
+            height: 100px;
+            display: flex;
+            /* 设置为弹性盒子 */
+            justify-content: space-around;
+            /* 让盒子里面的元素左右间隔相同 */
+        }
+
+        .top_bottom>.left {
+            width: 30%;
+            height: 100px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .top_bottom>.left>img {
+            width: 120px;
+            height: 80px;
+        }
+
+        .top_bottom>.middle {
+            width: 30%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .top_bottom>.middle>a {
+            color: #000000;
+            text-decoration: none;
+            /* 去掉A标签下划线*/
+            font-size: 18px;
+        }
+
+        .top_bottom>.middle>:nth-child(3) {
+            color: #ff134a;
+            text-decoration: none;
+            /* 去掉A标签下划线*/
+            font-size: 18px;
+
+        }
+
+        .top_bottom>.middle>a:hover {
+            /* 鼠标经过 变色*/
+            color: #fb0000;
+        }
+
+        .top_bottom>.right {
+            width: 30%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .top_bottom>.right>input {
+            width: 240px;
+            height: 36px;
+            border-radius: 32px;
+            outline: 0px;
+            border: 1px solid #fb0000;
+        }
+
+        .top_bottom>.right>div {
+            color: #8c8c8c;
+        }
+
+        .top_bottom>.right>img {
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            left: 74.5%;
+        }
+
+        .top_banner>img {
+            width: 100%;
+            height: 600px;
+        }
+
+        .container_text {
+            width: 80%;
+            height: 120px;
+            margin-left: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: #4c4c4c;
+        }
+
+        .container {
+            width: 80%;
+            margin-left: 10%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 200px;
+        }
+
+        .container>.container_list {
+            width: 20%;
+            height: auto;
+            margin: 20px;
+            border-radius: 16px;
+            padding-bottom: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container>.container_list>.list_top {
+            width: 100%;
+            height: 180px;
+            border-radius: 16px 16px 0px 0px;
+        }
+
+        .container>.container_list>.list_top>img {
+            width: 100%;
+            height: 100%;
+            border-radius: 16px 16px 0px 0px;
+        }
+
+        .container_list>.list_bottom {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container_list>.list_bottom>span {
+            width: 100%;
+            text-align: left;
+            display: block;
+            width: 100%;
+            height: 50%;
+            padding: 0px 8px;
+        }
+
+        .container_list>.list_bottom>.pirce_div {
+            width: 90%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .container_list>.list_bottom>.pirce_div>div>span {
+            color: #ff134a;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .container_list>.list_bottom>.pirce_div>:last-child {
+            width: auto;
+            padding: 3px 10px;
+            height: 26px;
+            border: #ff134a solid 1px;
+            border-radius: 12px;
+            text-align: center;
+            line-height: 26px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="top">
+        <div class="top_top">
+            <div class="top_left">
+                我的甜品 你的爱~
+            </div>
+            <div class="top_riight">
+                <a href="../html/signIn.html">请登录</a>
+                <a href="../html/signIn.html">注册</a>
+                <a href="../html/shoppingcart.html">购物车</a>
+            </div>
+        </div>
+        <div class="top_bottom">
+            <div class="left">
+                <img src="../images/logo.jpg" alt="">
+            </div>
+            <div class="middle">
+               <a href="../html/index.html">首页</a>
+                <a href="../html/desserts1.html">中式甜品</a>
+                <a href="../html/desserts2.html">西式甜品</a>
+
+            </div>
+            <div class="right">
+                <input type="text" placeholder="提拉米苏">
+                <img src="../images/timg.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="top_banner">
+        <img src="../images/banner.png" alt="">
+    </div>
+    <div class="container_text">热烈推荐</div>
+    <div class="container">
+        <div class="container_list">
+            <div class="list_top">
+                <img src="../images/middle11.jpg" alt="">
+            </div>
+            <div class="list_bottom">
+                <span>吃吃吃吃吃吃吃吃吃吃吃吃吃吃吃次</span>
+                <div class="pirce_div">
+                    <div>￥<span>9.9</span></div>
+                    <span>立即下单</span>
+                </div>
+            </div>
+        </div>
+        <div class="container_list">
+            <div class="list_top">
+                <img src="../images/middle11.jpg" alt="">
+            </div>
+            <div class="list_bottom">
+                <span>吃吃吃吃吃吃吃吃吃吃吃吃吃吃吃次</span>
+                <div class="pirce_div">
+                    <div>￥<span>9.9</span></div>
+                    <span>立即下单</span>
+                </div>
+            </div>
+        </div>
+        <div class="container_list">
+            <div class="list_top">
+                <img src="../images/middle11.jpg" alt="">
+            </div>
+            <div class="list_bottom">
+                <span>吃吃吃吃吃吃吃吃吃吃吃吃吃吃吃次</span>
+                <div class="pirce_div">
+                    <div>￥<span>9.9</span></div>
+                    <span>立即下单</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_list">
+            <div class="list_top">
+                <img src="../images/middle11.jpg" alt="">
+            </div>
+            <div class="list_bottom">
+                <span>吃吃吃吃吃吃吃吃吃吃吃吃吃吃吃次</span>
+                <div class="pirce_div">
+                    <div>￥<span>9.9</span></div>
+                    <span>立即下单</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
