@@ -1,11 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>购物车</title>
 </head>
+<style>
+    body {
+        padding: 0px;
+        margin: 0px;
+        height: auto;
+    }
+
+    .top {
+        width: 100%;
+        height: auto;
+        display: flex;
+        /* 设置为弹性盒子 */
+        justify-content: center;
+        /* 让盒子里面的元素水平居中 */
+        flex-wrap: wrap;
+    }
+
+    .top>.top_top {
+        width: 60%;
+        display: flex;
+        /* 设置为弹性盒子 */
+        justify-content: space-between;
+        /* 让盒子里面的元素2侧对齐 */
+        color: #8c8c8c;
+    }
+
+    .top>.top_top>.top_riight>a {
+        margin-right: 20px;
+        color: #8c8c8c;
+    }
+
+    .top_bottom {
+        width: 60%;
+        height: 100px;
+        display: flex;
+        /* 设置为弹性盒子 */
+        justify-content: flex-start;
+
+    }
+
+    .top_bottom>.left {
+        width: 20%;
+        height: 100px;
+        display: flex;
+
+        align-items: center;
+    }
+
+    .top_bottom>.left>img {
+        width: 120px;
+        height: 80px;
+    }
+
+    .top_bottom>.right {
+        width: 80%;
+        text-align: left;
+        line-height: 100px;
+        font-size: 32px;
+        font-weight: 700;
+        color: #8B658B;
+    }
+
+    .container {
+        margin-top: 40px;
+        width: 80%;
+        height: auto;
+        margin-left: 10%;
+        margin-bottom: 100px;
+
+    }
+
+    .container>.top_text {
+        width: 100%;
+        text-align: left;
+        font-size: 24px;
+
+    }
+
+    .container>.bottom_text {
+        width: 100%;
+        height: 60px;
+        background-color: #E8E8E8;
+        border-top: 1px #434343 solid;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .input_div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5%;
+
+        height: 100%;
+    }
+
+    .bus_div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+
+        height: 100%;
+    }
+
+    .pmeter_div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+
+        height: 100%;
+    }
+
+    .price_div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+        height: 100%;
+    }
+
+    .num_div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+
+        height: 100%;
+    }
+
+    .tprice_div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+
+        height: 100%;
+    }
+
+    .operation_div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+        height: 100%;
+    }
+
+    .container>.middle_div {
+        width: 100%;
+        height: auto;
+    }
+
+    .container>.middle_div>.list_div {
+        width: 100%;
+        height: 150px;
+        border-bottom: 1px #434343 solid;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .tprice_div>span {
+        color: #ff134a;
+        font-size: 20px;
+    }
+
+    .operation_div>span:hover {
+        color: #ff134a;
+        cursor: pointer;
+    }
+
+    .bus_div>.img_div {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .bus_div>.img_div>img {
+        width: 100%;
+        height: 80%;
+    }
+
+    .bus_div>.text_div {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bus_div>.text_div>span {
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .bus_div>.text_div>:first-child {
+        margin-top: 40px;
+    }
+
+    .list_pmeter_div {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        height: 100%;
+    }
+
+    .list_pmeter_div>span {
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .list_pmeter_div>:first-child {
+        margin-top: 40px;
+    }
+
+    .btn_1 {
+        width: 18px;
+        height: 18px;
+        background-color: #EEE9E9;
+        border-radius: 50%;
+        font-size: 16px;
+        display: flex;
+        line-height: 15px;
+        justify-content: center;
+        margin-right: 4px;
+    }
+
+    .btn_2 {
+        width: 18px;
+        height: 18px;
+        background-color: #EEE9E9;
+        border-radius: 50%;
+        font-size: 16px;
+        display: flex;
+        line-height: 15px;
+        justify-content: center;
+        margin-left: 4px;
+    }
+
+    .num_div>input {
+        width: 20px;
+        outline: none;
+        border: none;
+        text-align: center;
+    }
+
+    .bottom {
+        width: 80%;
+        height: 68px;
+        margin-left: 10%;
+        margin-bottom: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: #E8E8E8;
+    }
+
+    .bottom>.pay_btn {
+        width: 10%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: #ff134a;
+        font-size: 32px;
+        cursor: pointer;
+
+    }
+
+    .bottom>.pay_num {
+        margin-right: 60px;
+        font-size: 24px;
+        color: red;
+    }
+    .bottom>.left_text{
+        margin-right: 60px;
+    }
+</style>
+
 <body>
-    
+    <div class="top">
+        <div class="top_top">
+            <div class="top_left">
+                我的甜品 你的爱~
+            </div>
+            <div class="top_riight">
+                <a href="../html/signIn.html">请登录</a>
+                <a href="../html/signIn.html">注册</a>
+                <a href="../html/index.html">首页</a>
+            </div>
+        </div>
+        <div class="top_bottom">
+            <div class="left">
+                <img src="../images/logo.jpg" alt="">
+            </div>
+            <div class="right">
+                购物车
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="top_text">
+            我的商品
+        </div>
+        <div class="bottom_text">
+            <div class="input_div">
+                <input type="checkbox">
+            </div>
+            <div class="bus_div">
+                商品信息
+            </div>
+            <div class="pmeter_div">
+                商品参数
+            </div>
+            <div class="price_div">
+                价格
+            </div>
+            <div class="num_div">数量</div>
+            <div class="tprice_div">
+                小计
+            </div>
+            <div class="operation_div">操作</div>
+        </div>
+        <div class="middle_div">
+            <div class="list_div">
+                <div class="input_div">
+                    <input type="checkbox">
+                </div>
+                <div class="bus_div">
+                    <div class="img_div">
+                        <img src="../images/gimg7.jpg" alt="">
+                    </div>
+                    <div class="text_div">
+                        <span>港式泡芙</span>
+                        <span>2020新品上市</span>
+                    </div>
+                </div>
+                <div class="list_pmeter_div">
+                    <span>净含量：250克</span>
+                    <span>规 格：中杯</span>
+                </div>
+                <div class="price_div">
+                    ￥39
+                </div>
+                <div class="num_div">
+                    <div class="btn_1">-</div> <input type="text" value="1">
+                    <div class="btn_2">+</div>
+                </div>
+                <div class="tprice_div">
+                    <span>￥39</span>
+                </div>
+                <div class="operation_div"><span>移除商品</span></div>
+            </div>
+
+            <div class="list_div">
+                <div class="input_div">
+                    <input type="checkbox">
+                </div>
+                <div class="bus_div">
+                    <div class="img_div">
+                        <img src="../images/gimg7.jpg" alt="">
+                    </div>
+                    <div class="text_div">
+                        <span>港式泡芙</span>
+                        <span>2020新品上市</span>
+                    </div>
+                </div>
+                <div class="list_pmeter_div">
+                    <span>净含量：250克</span>
+                    <span>规 格：中杯</span>
+                </div>
+                <div class="price_div">
+                    ￥39
+                </div>
+                <div class="num_div">
+                    <div class="btn_1">-</div> <input type="text" value="1">
+                    <div class="btn_2">+</div>
+                </div>
+                <div class="tprice_div">
+                    <span>￥39</span>
+                </div>
+                <div class="operation_div"><span>移除商品</span></div>
+            </div>
+            <div class="list_div">
+                <div class="input_div">
+                    <input type="checkbox">
+                </div>
+                <div class="bus_div">
+                    <div class="img_div">
+                        <img src="../images/gimg7.jpg" alt="">
+                    </div>
+                    <div class="text_div">
+                        <span>港式泡芙</span>
+                        <span>2020新品上市</span>
+                    </div>
+                </div>
+                <div class="list_pmeter_div">
+                    <span>净含量：250克</span>
+                    <span>规 格：中杯</span>
+                </div>
+                <div class="price_div">
+                    ￥39
+                </div>
+                <div class="num_div">
+                    <div class="btn_1">-</div> <input type="text" value="1">
+                    <div class="btn_2">+</div>
+                </div>
+                <div class="tprice_div">
+                    <span>￥39</span>
+                </div>
+                <div class="operation_div"><span>移除商品</span></div>
+            </div>
+            <div class="list_div">
+                <div class="input_div">
+                    <input type="checkbox">
+                </div>
+                <div class="bus_div">
+                    <div class="img_div">
+                        <img src="../images/gimg7.jpg" alt="">
+                    </div>
+                    <div class="text_div">
+                        <span>港式泡芙</span>
+                        <span>2020新品上市</span>
+                    </div>
+                </div>
+                <div class="list_pmeter_div">
+                    <span>净含量：250克</span>
+                    <span>规 格：中杯</span>
+                </div>
+                <div class="price_div">
+                    ￥39
+                </div>
+                <div class="num_div">
+                    <div class="btn_1">-</div> <input type="text" value="1">
+                    <div class="btn_2">+</div>
+                </div>
+                <div class="tprice_div">
+                    <span>￥39</span>
+                </div>
+                <div class="operation_div"><span>移除商品</span></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="left_text">
+            <span>已选商品</span>
+            <span>4件</span>
+        </div>
+        <div class="pay_num">￥695</div>
+        <div class="pay_btn">结算</div>
+    </div>
 </body>
+
 </html>
